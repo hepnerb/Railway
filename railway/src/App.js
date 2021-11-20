@@ -87,7 +87,7 @@ import Board,  {addCard} from '@asseinfo/react-kanban'
 import React, { Component } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
-import {ProgressBar} from '@adobe/react-spectrum'
+import {ProgressBar, View} from '@adobe/react-spectrum'
 
 
 import "./App.css";
@@ -199,6 +199,15 @@ class App extends Component {
           .add(4, "days")
           .toDate(),
         title: "Lyft"
+      },
+      {
+        start: moment()
+          .subtract(1, "days")
+          .toDate(),
+        end: moment()
+          .add(0, "days")
+          .toDate(),
+        title: "Sandbox Hackathon"
       }
     ]
   };
@@ -214,17 +223,19 @@ class App extends Component {
           events={this.state.events}
           style={{ height: "100vh" }}
         />
-
-        <ProgressBar label="Progress" value={100} />
+        <ProgressBar label="Progress" value={25} />
         <p>
-        <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" unchecked></input>
-        <label class="form-check-label"> 5 HackerRank Problems  </label>
+        <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked></input>
+        <label class="form-check-label"> Complete 5 HackerRank Problems  </label>
         <br></br>
         <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" unchecked></input>
-        <label class="form-check-label"> Apply to 10 Internships  </label>
+        <label class="form-check-label"> Apply to 10 Internships </label>
         <br></br>
         <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" unchecked></input>
         <label class="form-check-label"> Apply to 3 Grad Schools  </label>
+        <br></br>
+        <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" unchecked></input>
+        <label class="form-check-label"> Apply for Graduation  </label>
         <br></br>
         </p>
         <Board>{board}</Board>
