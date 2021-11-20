@@ -1,41 +1,45 @@
 import './App.css';
-import firebase from 'firebase/app';
-import 'firebase/firestore';
-import 'firebase/auth';
+import Board from '@asseinfo/react-kanban'
+import '@asseinfo/react-kanban/dist/styles.css'
 
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { useCollectionData } from 'react-firebase-hooks/firestore';
+const board = {
+  columns: [
+    {
+      id: 1,
+      title: 'Backlog',
+      cards: [
+        {
+          id: 1,
+          title: 'Add card',
+          description: 'Add capability to add a card in a column'
+        },
+      ]
+    },
+    {
+      id: 2,
+      title: 'Doing',
+      cards: [
+        {
+          id: 2,
+          title: 'Drag-n-drop support',
+          description: 'Move a card between the columns'
+        },
+      ]
+    }
+  ]
+}
 
-// firebase.initializeApp({
-//     apiKey: "AIzaSyCLrC4PaP-E5F-N2-mCiCgg8lNSzaJvxIs",
-//     authDomain: "railway-db.firebaseapp.com",
-//     projectId: "railway-db",
-//     storageBucket: "railway-db.appspot.com",
-//     messagingSenderId: "814197185809",
-//     appId: "1:814197185809:web:aa438a4e06480f896d80b0",
-//     measurementId: "G-R6YGSPCRMK"
-  
-//   })
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-
-      </header>
-      <body>
-        
-      </body>
+      <Board initialBoard={board} />
     </div>
   
   );
-  // apiKey: "AIzaSyCLrC4PaP-E5F-N2-mCiCgg8lNSzaJvxIs",
-  //   authDomain: "railway-db.firebaseapp.com",
-  //   projectId: "railway-db",
-  //   storageBucket: "railway-db.appspot.com",
-  //   messagingSenderId: "814197185809",
-  //   appId: "1:814197185809:web:aa438a4e06480f896d80b0",
-  //   measurementId: "G-R6YGSPCRMK"
+
 }
 
 export default App;
