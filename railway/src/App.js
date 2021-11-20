@@ -1,7 +1,7 @@
-import './App.css';
+// import './App.css';
 // import Board,  { addCard} from '@asseinfo/react-kanban'
 // import '@asseinfo/react-kanban/dist/styles.css'
-//comment
+// // comment
 // const board = {
 //   columns: [
 //     {
@@ -81,12 +81,101 @@ import './App.css';
 
 
 //please
+
+import '@asseinfo/react-kanban/dist/styles.css'
+import Board,  {addCard} from '@asseinfo/react-kanban'
 import React, { Component } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
+import {ProgressBar} from '@adobe/react-spectrum'
+
 
 import "./App.css";
 import "react-big-calendar/lib/css/react-big-calendar.css";
+
+const board = {
+  columns: [
+    {
+      id: 1,
+      title: 'Semester 1',
+      cards: [
+        {
+          id: 1,
+          title: 'CS142',
+          description: 'Intro to Programming'
+        },
+        {
+          id: 2,
+          title: 'Math 290',
+          description: 'Intro to Proofs'
+        },
+        {
+          id: 3,
+          title: 'Math 112',
+          description: 'Calc 1'
+        },
+      ]
+    },
+    {
+      id: 2,
+      title: 'Semester 2',
+      cards: [
+        {
+          id: 4,
+          title: 'Math 113',
+          description: 'Calc 2'
+        },
+        {
+          id: 5,
+          title: 'Math 213',
+          description: 'Linear Algebra'
+        },
+        {
+          id: 6,
+          title: 'Math 215',
+          description: 'Linear Algebra Coding'
+        },
+      ]
+    },
+    {
+      id: 3,
+      title: 'Semester 3',
+      cards: [
+        {
+          id: 7,
+          title: 'Math 314',
+          description: 'Multivariable Calculus'
+        },
+        {
+          id: 8,
+          title: 'CS 235',
+          description: 'Data Structures'
+        },
+        {
+          id: 9,
+          title: 'American Heritage',
+          description: 'Best class this campus offers'
+        },
+      ]
+    },
+    {
+      id: 4,
+      title: 'Semester 4',
+      cards: [
+        {
+          id: 10,
+          title: 'Math 341',
+          description: 'Theory to Analysis'
+        },
+        {
+          id: 11,
+          title: 'Math 334',
+          description: 'Ordinary Differential Equations'
+        },
+      ]
+    }
+  ]
+}
 
 const localizer = momentLocalizer(moment);
 
@@ -100,7 +189,7 @@ class App extends Component {
         end: moment()
           .subtract(2, "days")
           .toDate(),
-        title: "Jeff Humphreys Infosession"
+        title: "Jeff Humphreys Info Session"
       },
       {
         start: moment()
@@ -117,6 +206,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"></link>
         <Calendar
           localizer={localizer}
           defaultDate={new Date()}
@@ -124,9 +214,19 @@ class App extends Component {
           events={this.state.events}
           style={{ height: "100vh" }}
         />
+
+        <ProgressBar label="Progress" value={100} />
         <p>
-          P is for please work
+        <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked></input>
+        <label class="form-check-label"> 5 HackerRank Problems  </label>
+        <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked></input>
+        <label class="form-check-label"> Apply to 10 Internships  </label>
+        <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked></input>
+        <label class="form-check-label"> Apply to 3 Grad Schools  </label>
         </p>
+        <Board>{board}</Board>
+        <p><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br></p>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
       </div>
     );
   }
