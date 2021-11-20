@@ -1,5 +1,5 @@
 import './App.css';
-import Board from '@asseinfo/react-kanban'
+import Board,  { addCard} from '@asseinfo/react-kanban'
 import '@asseinfo/react-kanban/dist/styles.css'
 //comment
 const board = {
@@ -35,7 +35,12 @@ const board = {
 function App() {
   return (
     <div className="App">
-      <Board initialBoard={board} />
+      <Board initialBoard={board}>
+      <button type='button' onClick={() => addCard({ id: 99, title: 'New Card' })}>Add Card</button>
+  {board}
+</Board>
+
+
     </div>
   
   );
@@ -51,7 +56,7 @@ export default App;
 // import firebase from 'firebase/app';
 // import 'firebase/firestore';
 // import 'firebase/auth';
-// import 'firebase/analytics';
+// // import 'firebase/analytics';
 
 // import { useAuthState } from 'react-firebase-hooks/auth';
 // import { useCollectionData } from 'react-firebase-hooks/firestore';
@@ -64,11 +69,10 @@ export default App;
 //   messagingSenderId: "814197185809",
 //   appId: "1:814197185809:web:aa438a4e06480f896d80b0",
 //   measurementId: "G-R6YGSPCRMK"
-
 // })
 
 // const auth = firebase.auth();
-// const firestore = firebase.firestore();
+// // const firestore = firebase.firestore();
 
 // function App() {
 //   const [user] = useAuthState(auth);
