@@ -36,14 +36,14 @@
 // export default function App() {
 //   const [isChecked, setIsChecked] = useState(false);
 //   const [isChecked1, setIsChecked1] = useState(false);
-//   var ligma = 100;
+//   var foo = 100;
 //   const handleOnChange1= () => {
 //     setIsChecked1(!isChecked1);
 //   };
 //   const handleOnChange = () => {
 //     setIsChecked(!isChecked);
 //     if (!isChecked){
-//       ligma = 10;
+//       foo = 10;
 //     }
 //   };
 
@@ -73,7 +73,7 @@
 //         Kaggle1
 //       </div>
 //       <div className="result">
-//         Above checkbox is {ligma}.
+//         Above checkbox is {foo}.
 //       </div>
 //     </div>
 //   );
@@ -217,12 +217,15 @@ class App extends Component {
 
         <ProgressBar label="Progress" value={100} />
         <p>
-        <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked></input>
+        <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" unchecked></input>
         <label class="form-check-label"> 5 HackerRank Problems  </label>
-        <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked></input>
+        <br></br>
+        <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" unchecked></input>
         <label class="form-check-label"> Apply to 10 Internships  </label>
-        <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked></input>
+        <br></br>
+        <input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" unchecked></input>
         <label class="form-check-label"> Apply to 3 Grad Schools  </label>
+        <br></br>
         </p>
         <Board>{board}</Board>
         <p><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br></p>
