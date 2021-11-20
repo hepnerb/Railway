@@ -87,12 +87,18 @@ import Board,  {addCard} from '@asseinfo/react-kanban'
 import React, { Component } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
-import {ProgressBar, View} from '@adobe/react-spectrum'
+import {ProgressBar} from '@adobe/react-spectrum'
+// import { IgrExcelModule } from 'igniteui-react-excel';
+// import { IgrSpreadsheetModule } from 'igniteui-react-spreadsheet';
 
 
 import "./App.css";
 import "react-big-calendar/lib/css/react-big-calendar.css";
+// import { IgrSpreadsheet } from 'igniteui-react-spreadsheet';
+// import { ExcelUtility } from 'ExcelUtility';
 
+// IgrExcelModule.register();
+// IgrSpreadsheetModule.register();
 const board = {
   columns: [
     {
@@ -177,9 +183,12 @@ const board = {
   ]
 }
 
-const localizer = momentLocalizer(moment);
 
+
+const localizer = momentLocalizer(moment);
+// const spreadsheet = new IgrSpreadsheet({})
 class App extends Component {
+  
   state = {
     events: [
       {
@@ -211,7 +220,9 @@ class App extends Component {
       }
     ]
   };
+  
 
+  
   render() {
     return (
       <div className="App">
@@ -241,6 +252,7 @@ class App extends Component {
         <Board>{board}</Board>
         <p><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br></p>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        
       </div>
     );
   }

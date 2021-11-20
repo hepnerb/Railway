@@ -1,0 +1,62 @@
+[debug] [2021-11-20T18:52:18.004Z] ----------------------------------------------------------------------
+[debug] [2021-11-20T18:52:18.007Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\hepne\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init functions
+[debug] [2021-11-20T18:52:18.008Z] CLI Version:   9.23.0
+[debug] [2021-11-20T18:52:18.008Z] Platform:      win32
+[debug] [2021-11-20T18:52:18.008Z] Node Version:  v14.15.0
+[debug] [2021-11-20T18:52:18.009Z] Time:          Sat Nov 20 2021 11:52:18 GMT-0700 (Mountain Standard Time)
+[debug] [2021-11-20T18:52:18.010Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-11-20T18:52:18.096Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-11-20T18:52:18.097Z] > authorizing via signed-in user (hepnerbryce@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\hepne\OneDrive\Documents\Railway\railway
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using railway123. 
+[debug] [2021-11-20T18:52:20.336Z] > refreshing access token with scopes: []
+[debug] [2021-11-20T18:52:20.337Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-20T18:52:20.487Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Sat, 20 Nov 2021 18:52:20 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-20T18:52:20.684Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/railway123 [none]
+[debug] [2021-11-20T18:52:20.901Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/railway123 200
+[debug] [2021-11-20T18:52:20.901Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/railway123 {"projectId":"railway123","projectNumber":"42471464546","displayName":"railwayfinal","name":"projects/railway123","resources":{"hostingSite":"railway123","storageBucket":"railway123.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+=== Functions Setup
+[info] 
+[info] A functions directory will be created in your project with sample code
+[info] pre-configured. Functions can be deployed with firebase deploy.
+[info] 
+[debug] [2021-11-20T18:52:20.912Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-11-20T18:52:20.912Z] > authorizing via signed-in user (hepnerbryce@gmail.com)
+[debug] [2021-11-20T18:52:20.913Z] [iam] checking project railway123 for permissions ["firebase.projects.get"]
+[debug] [2021-11-20T18:52:20.913Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-11-20T18:52:20.913Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-11-20T18:52:21.042Z] <<< HTTP RESPONSE 200 {"date":"Sat, 20 Nov 2021 18:52:21 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-20T18:52:21.085Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/railway123:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-11-20T18:52:21.357Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 20 Nov 2021 18:52:21 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=154","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-20T18:52:21.358Z] >>> HTTP REQUEST POST https://serviceusage.googleapis.com/v1/projects/railway123/services/cloudfunctions.googleapis.com:enable  
+ 
+[debug] [2021-11-20T18:52:21.359Z] >>> HTTP REQUEST POST https://serviceusage.googleapis.com/v1/projects/railway123/services/runtimeconfig.googleapis.com:enable  
+ 
+[debug] [2021-11-20T18:52:21.643Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 20 Nov 2021 18:52:21 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-11-20T18:52:21.657Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sat, 20 Nov 2021 18:52:21 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
